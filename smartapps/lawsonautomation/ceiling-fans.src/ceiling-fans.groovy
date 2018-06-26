@@ -50,18 +50,7 @@ preferences {
                 required: false,
         	    image: "https://raw.githubusercontent.com/lawsonautomation/icons/master/info.png",
                 page: "Users Guide")
-    	}
-		section("Version 1.1.3 - Copyright © 2016, 2017 Thomas Lawson. " +
-    			"If you like this app and would like to contribute to its development (and the development of similar apps), " +
-        		"tap the link below to make a donation.") {
-        	href(name: "LawsonAutomation",
-    	        title: "Donate via PayPal",
-    	        description: "Tap to Donate",
-             	required: false,
-       	     	style: "external",
-        	    image: "https://raw.githubusercontent.com/lawsonautomation/icons/master/guru-60.png",
-        	    url: "http://PayPal.Me/LawsonAutomation")
-		}
+    		}	
 	}
     page(name: "Users Guide", title: "User's Guide", nextPage: "mainPage") { 
         section("Overview") {
