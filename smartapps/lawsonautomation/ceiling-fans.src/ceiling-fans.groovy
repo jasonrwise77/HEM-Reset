@@ -18,7 +18,7 @@ definition(
     namespace	: "LawsonAutomation",
     author      : "JW",
     description	: "Child App, DO NOT INSTALL DIRECTLY",
-    parent		: "LawsonAutomation:Fan Guru",     
+    parent		: "LawsonAutomation:Ceiling Fan Guru",     
 	category	: "My apps",
     iconUrl		: "https://raw.githubusercontent.com/lawsonautomation/icons/master/guru-60.png",
     iconX2Url	: "https://raw.githubusercontent.com/lawsonautomation/icons/master/guru-120.png",
