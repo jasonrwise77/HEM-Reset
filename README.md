@@ -1,2 +1,2 @@
-# jasonrwise77 Apps
-SmartThings Apps
+# jasonrwise77
+SmartThings Apps & Device Handlers
