@@ -1,2 +1,2 @@
-# HEM-Reset 
-Hem Daily Reset Manager
+# jasonrwise77 Apps
+SmartThings Apps
