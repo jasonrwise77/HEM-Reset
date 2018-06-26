@@ -16,7 +16,7 @@
 definition(
     name    	: "Ceiling Fans",
     namespace	: "LawsonAutomation",
-    author      : "JW",
+    author      : "Tom Lawson",
     description	: "Child App, DO NOT INSTALL DIRECTLY",
     parent		: "LawsonAutomation:Ceiling Fan Guru",     
 	category	: "My apps",
