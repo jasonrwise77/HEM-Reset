@@ -16,7 +16,7 @@
 definition(
     name        : "Ceiling Fan Guru",
     namespace   : "LawsonAutomation",
-    author      : "JW",
+    author      : "Tom Lawson",
     description : "Control your fan, create new applications within this app",
     category	: "My Apps",
     iconUrl     : "https://raw.githubusercontent.com/lawsonautomation/icons/master/guru-60.png",
