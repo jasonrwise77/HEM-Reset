@@ -35,8 +35,8 @@ page name: "main"
                 section("Hem Profiles",  uninstall: false){
                 app(name: "profiles daily", appName: "HEM Daily Reset", namespace: "jasonrwise77", title: "Create a new Daily Reset Profile", multiple: true,  uninstall: false)
 		app(name: "profiles monthly", appName: "HEM Monthly Reset", namespace: "jasonrwise77", title: "Create a new Monthly Reset Profile", multiple: true,  uninstall: false)
-                        }
-                    }
+                 }
+                 }
 }
 
 /************************************************************************************************************
