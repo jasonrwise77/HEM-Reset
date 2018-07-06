@@ -27,10 +27,10 @@ definition(
     )
 
 preferences {
-    section("Choose an Energy Meter to reset:") {
+    section("Choose Energy Meters to reset:") {
         input(name: "meters", type: "capability.energyMeter", title: "Which Energy Meter? (tap here)", description: null, multiple: true, required: true, submitOnChange: true)
     }
-    section("Reset Time of Day") {
+    section("Time of Day To Reset") {
         input "time", "time", title: "At this time of day"
     }
 }
