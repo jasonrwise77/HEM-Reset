@@ -29,9 +29,9 @@ definition(
 
 preferences {
     section("Choose HEMs to reset:") {
-        input(name: "meter", type: "capability.energyMeter", title: "Which HEMs To Reset?", description: null, required: true, submitOnChange: true)
+        input(name: "meter", type: "capability.energyMeter", title: "Choose HEMs To Reset?", description: null, required: true, submitOnChange: true)
     }    
-    section("Time of Day To Reset") {
+    section("Time of The Day To Reset") {
         input "time", "time", title: "Select A Time Of Day"
     }    
     section("Day Of The Month To Reset") {
@@ -40,11 +40,11 @@ preferences {
 }
 
 def installed() {
-	log.debug "Aeon HEM v1 Reset Manager SmartApp installed, now preparing to schedule the first reset."
+	log.debug "Monthly Energy Meter Reset Manager SmartApp installed, now preparing to schedule the first reset."
 }
 
 def updated() {
-	log.debug "Aeon HEM v1 Reset Manager SmartApp updated, so update the user defined schedule and schedule another check for the next day."
+	log.debug "Monthly Energy Meter Reset Manager SmartApp updated, so update the user defined schedule and schedule another check for the next day."
 	unschedule()
     def scheduleTime = timeToday(time, location.timeZone)
     def timeNow = now()
