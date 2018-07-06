@@ -28,8 +28,8 @@ definition(
     )
 
 preferences {
-    section("Choose HEMs to reset:") {
-        input(name: "meter", type: "capability.energyMeter", title: "Choose HEMs To Reset?", description: null, required: true, submitOnChange: true)
+    section("HEMs To Reset") {
+        input(name: "meter", type: "capability.energyMeter", title: "Select HEMs To Reset", description: null, required: true, submitOnChange: true)
     }    
     section("Time of The Day To Reset") {
         input "time", "time", title: "Select A Time Of Day"
