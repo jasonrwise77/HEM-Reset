@@ -28,13 +28,13 @@ definition(
     )
 
 preferences {
-    section("Choose an Aeon HEM v1 to reset:") {
+    section("Choose HEMs to reset:") {
         input(name: "meter", type: "capability.energyMeter", title: "Which Aeon HEM v1? (tap here)", description: null, required: true, submitOnChange: true)
     }    
-    section("Reset Time of Day") {
+    section("Time of Day To Reset") {
         input "time", "time", title: "At this time of day"
     }    
-    section("Reset Day of Month") {
+    section("Day Of The Month To Reset") {
         input "day", "number", title: "On this day of the month"
     }
 }
