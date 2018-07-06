@@ -33,10 +33,10 @@ page name: "main"
             def main() {
                 dynamicPage (name: "main", title: "", install: true, uninstall: true) { 
                 section("Hem Profiles",  uninstall: false){
-                app(name: "profiles daily", appName: "HEM Daily Reset", namespace: "jasonrwise77", title: "Create a new Daily Reset Profile", multiple: true,  uninstall: false)
-		app(name: "profiles monthly", appName: "HEM Monthly Reset", namespace: "jasonrwise77", title: "Create a new Monthly Reset Profile", multiple: true,  uninstall: false)
+                app(name: "profiles daily", appName: "HEM Daily Reset", namespace: "jasonrwise77", title: "Create a new Daily Reset Profile", multiple: true,  uninstall: false, image:"https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Daily.png")
+		app(name: "profiles monthly", appName: "HEM Monthly Reset", namespace: "jasonrwise77", title: "Create a new Monthly Reset Profile", multiple: true,  uninstall: false, image:"https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Monthly.png")
                  }
-                 }
+		 }
 }
 
 /************************************************************************************************************
