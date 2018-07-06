@@ -21,9 +21,9 @@ definition(
     description: "Resets the Energy Monitor Daily on a specified time",
     parent: "jasonrwise77:HEM Reset Manager",
     category: "My Apps",
-    iconUrl: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Daily.png",
-    iconX2Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Daily.png",
-    iconX3Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Daily.png"
+    iconUrl: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Monthly.png",
+    iconX2Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Monthly.png",
+    iconX3Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/HEM%20Monthly.png"
     )
 
 preferences {
