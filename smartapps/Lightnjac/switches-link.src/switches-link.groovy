@@ -20,7 +20,7 @@ page name: "main"
             def main() {
                 dynamicPage (name: "main", title: "", install: true, uninstall: true) { 
                 section("Switches",  uninstall: false){
-                app(name: "Switches", appName: "Switches", namespace: "Lightnjac", title: "Create a new Switch Profile", multiple: true,  uninstall: false, image:"https://s3.amazonaws.com/smartapp-icons/Meta/light_outlet.png")
+                app(name: "profiles", appName: "Switches", namespace: "Lightnjac", title: "Create a new Switch Profile", multiple: true,  uninstall: false, image:"https://s3.amazonaws.com/smartapp-icons/Meta/light_outlet.png")
                  }
 		 }
 }
