@@ -1,5 +1,5 @@
 /**
-* Switches link.
+* Switches link
 */
 definition(
 name: "Switches link",
