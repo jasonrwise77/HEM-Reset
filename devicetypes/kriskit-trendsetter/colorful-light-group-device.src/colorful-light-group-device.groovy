@@ -14,7 +14,7 @@
  *
  */
 metadata {
-	definition (name: "Colorful Light Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch") {
+	definition (name: "Colorful Light Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch", mnmn: "SmartThings", vid:"generic-switch") {
 		capability "Actuator"
 		capability "Sensor"
 		capability "Switch"
