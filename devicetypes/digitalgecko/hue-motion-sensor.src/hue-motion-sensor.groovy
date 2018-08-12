@@ -20,9 +20,10 @@ metadata {
 		capability "Configuration"
 		capability "Battery"
 		capability "Refresh"
-        capability "Temperature Measurement"
-        capability "Sensor"
-        capability "Illuminance Measurement" //0x0400
+        	capability "Temperature Measurement"
+        	capability "Sensor"
+        	capability "Illuminance Measurement" //0x0400
+	   	capability "Health Check"
 
         fingerprint profileId: "0104", inClusters: "0000,0001,0003,0406,0400,0402", outClusters: "0019", manufacturer: "Philips", model: "SML001", deviceJoinName: "Hue Motion Sensor"
     }
