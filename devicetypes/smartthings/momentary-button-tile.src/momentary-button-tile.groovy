@@ -17,11 +17,12 @@
  *  Date: 2013-05-01
  */
 metadata {
-	definition (name: "Momentary Button Tile", namespace: "smartthings", author: "SmartThings") {
+	definition (name: "Momentary Button Tile", namespace: "smartthings", author: "SmartThings", mnmn: "SmartThings", vid: "generic-momentary-button") {
 		capability "Actuator"
 		capability "Switch"
 		capability "Momentary"
 		capability "Sensor"
+        capability "Health Check"
 	}
 
 	// simulator metadata
