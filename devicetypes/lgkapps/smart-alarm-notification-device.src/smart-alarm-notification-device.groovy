@@ -15,6 +15,7 @@ metadata {
   definition (name: "Smart Alarm Notification Device", namespace: "lgkapps", author: "Larry Kahn kahn@lgk.com") {
     capability "Notification"
     capability "Switch"
+    capability "Health Check"
     
     command "onPhysical"
 	command "offPhysical"
