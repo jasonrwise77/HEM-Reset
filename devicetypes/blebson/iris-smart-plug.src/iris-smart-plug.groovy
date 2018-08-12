@@ -17,7 +17,7 @@
  */
 metadata {
 	// Automatically generated. Make future change here.
-	definition (name: "Iris Smart Plug", namespace: "blebson", author: "SmartThings") {
+	definition (name: "Iris Smart Plug", namespace: "blebson", author: "SmartThings", mnmn: "SmartThings", vid: "generic-switch") {
 		capability "Actuator"
 		capability "Switch"
 		capability "Power Meter"
@@ -25,6 +25,7 @@ metadata {
 		capability "Configuration"
 		capability "Refresh"
 		capability "Sensor"
+		capability "Health Check"
 		
 		// indicates that device keeps track of heartbeat (in state.heartbeat)
 		attribute "heartbeat", "string"     
