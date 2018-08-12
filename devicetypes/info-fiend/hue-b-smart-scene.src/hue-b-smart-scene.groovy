@@ -15,7 +15,7 @@
  *  version 1.1: added setTo2Groups() - use this function to set scene to two different groups at once 
  */
 metadata {
-	definition (name: "Hue B Smart Scene", namespace: "info_fiend", author: "Anthony Pastor", mnmn: "SmartThings", vid:"generic-switch") {
+	definition (name: "Hue B Smart Scene", namespace: "info_fiend", author: "Anthony Pastor", mnmn: "SmartThings", vid:"generic-button") {
 		capability "Actuator"
         capability "Switch"
         capability "Momentary"
