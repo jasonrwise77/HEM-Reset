@@ -19,6 +19,7 @@ metadata {
 		capability "Sensor"
 		capability "Switch"
 		capability "Switch Level"
+		capability "Health Check"
         
         command "resetLevel"
         
