@@ -25,6 +25,7 @@ metadata {
 		capability "Polling"
 		capability "Refresh"
 		capability "Sensor"
+		capability "Health Check"
 
 		command "lowSpeed"
 		command "medSpeed"
