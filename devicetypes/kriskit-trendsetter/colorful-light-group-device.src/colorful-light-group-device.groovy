@@ -19,7 +19,8 @@ metadata {
 		capability "Sensor"
 		capability "Switch"
 		capability "Switch Level"
-        capability "Color Control"
+        	capability "Color Control"
+		capability "Health Check"
         
         command "resetLevel"
         command "resetSaturation"
