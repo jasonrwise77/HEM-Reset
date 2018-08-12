@@ -18,6 +18,7 @@ metadata {
 		capability "Relative Humidity Measurement"
 		capability "Temperature Measurement"
 		capability "Refresh"
+		capability "Health Check"
 
 		command "enrollResponse"
 
