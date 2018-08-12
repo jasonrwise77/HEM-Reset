@@ -28,7 +28,8 @@ metadata {
 		capability "Polling"
 		capability "Refresh"
 		capability "Sensor"
-        capability "Configuration"
+      		capability "Configuration"
+		capability "Health Check"
        
         command "reset"
         command "refresh"
