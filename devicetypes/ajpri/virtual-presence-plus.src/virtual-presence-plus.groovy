@@ -8,7 +8,8 @@ metadata {
         capability "Switch"
         capability "Refresh"
         capability "Presence Sensor"
-		capability "Sensor"
+	capability "Sensor"
+	capability "Health Check"
         
 		command "arrived"
 		command "departed"
