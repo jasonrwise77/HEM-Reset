@@ -21,8 +21,9 @@ metadata {
         capability "Momentary"
         capability "Sensor"
         capability "Configuration"
+	capability "Health Check"
         
-		command "setToGroup"
+	command "setToGroup"
         command "setTo2Groups"        
         command "updateScene"
         command	"updateSceneFromDevice"
