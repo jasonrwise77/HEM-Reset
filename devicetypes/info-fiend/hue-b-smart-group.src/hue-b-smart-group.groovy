@@ -40,7 +40,7 @@ preferences {
 } 
  
 metadata {
-	definition (name: "Hue B Smart Group", namespace: "info_fiend", author: "Anthony Pastor") {
+	definition (name: "Hue B Smart Group", namespace: "info_fiend", author: "Anthony Pastor", mnmn: "SmartThings", vid:"generic-rgbw-color-bulb") {
 		capability "Switch Level"
 		capability "Actuator"
 		capability "Color Control"
