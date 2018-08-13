@@ -19,7 +19,7 @@
  *
  */
 metadata {
-	definition (name: "Hue B Smart Bridge", namespace: "info_fiend", author: "Anthony Pastor") {
+	definition (name: "Hue B Smart Bridge", namespace: "info_fiend", author: "Anthony Pastor", mnmn: "SmartThings", vid: "generic-bridge") {
 		capability "Actuator"
 		capability "Bridge"
 		capability "Health Check"
