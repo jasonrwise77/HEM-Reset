@@ -14,12 +14,11 @@
  *
  */
 metadata {
-	definition (name: "Dimmer Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch", mnmn: "SmartThings", vid:"generic-dimmer") {
+	definition (name: "Dimmer Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch", vid: "generic-dimmer") {
 		capability "Actuator"
 		capability "Sensor"
 		capability "Switch"
 		capability "Switch Level"
-		capability "Health Check"
         
         command "resetLevel"
         
@@ -70,10 +69,18 @@ metadata {
             state "default", label:' Sync ', unit:"", action: "resetLevel", backgroundColor: "#ff9900"
             state "ok", label:'', unit:"", backgroundColor: "#00b509"
         }
+        
+       	standardTile("onButton", "onButton", height:1, width:3, decoration: "flat", inactiveLabel: true) {
+            state "default", action: "switch.on", label:"On", unit:""
+        }
+        
+        standardTile("offButton", "offButton", height:1, width:3, decoration: "flat", inactiveLabel: true) {
+            state "default", action: "switch.off", label:"Off", unit:""
+        }
 	}
     
     main "switch"
-    details(["switch", "levelLabel", "levelSliderControl", "levelValue", "levelSync"])
+    details(["switch", "levelLabel", "levelSliderControl", "levelValue", "levelSync", "onButton", "offButton"])
 }
 
 def parse(String description) {
@@ -130,7 +137,7 @@ def off(triggerGroup) {
 }
 
 def syncSwitch(values) {
- log.debug "syncSwitch(): $values"
+	log.debug "syncSwitch(): $values"
     
     def onCount = values?.count { it == "on" }
     def percentOn = (int)Math.floor((onCount / values?.size()) * 100)
@@ -138,10 +145,10 @@ def syncSwitch(values) {
     log.debug "Percent On: $percentOn"
     
     if (percentOn == 0 || percentOn == 100) {
-    if (percentOn == 0)
-        off(false)
+    	if (percentOn == 0)
+        	off(false)
         else
-        on(false)            
+        	on(false)            
         return
     }
     
@@ -150,18 +157,15 @@ def syncSwitch(values) {
     if (percentOn == 50)
       //value = "half"
         value = "on"
-    else if (percentOn > 0 && percentOn <= 25)
-      //value = "almostAllOff"
-        value = "off"
-    else if (percentOn > 25 && percentOn < 50)
+    else if (percentOn > 0 && percentOn < 15)
       //value = "mostlyOff"
-        value = "on"
-    else if (percentOn > 50 && percentOn < 100)
+        value = "off"
+    else if (percentOn > 15 && percentOn < 100)
       //value = "mostlyOn"
         value = "on"
         
- sendEvent(name: "switch", value: value)
- sendEvent(name: "onPercentage", value: percentOn, displayed: false)
+	sendEvent(name: "switch", value: value)
+	sendEvent(name: "onPercentage", value: percentOn, displayed: false)
 }
 
 // LEVEL
