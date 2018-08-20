@@ -14,13 +14,12 @@
  *
  */
 metadata {
-	definition (name: "Colorful Light Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch", mnmn: "SmartThings", vid:"generic-rgbw-color-bulb") {
+	definition (name: "Colorful Light Group Device", namespace: "kriskit-trendsetter", author: "Chris Kitch",  vid: "generic-rgb-color-bulb") {
 		capability "Actuator"
 		capability "Sensor"
 		capability "Switch"
 		capability "Switch Level"
-        	capability "Color Control"
-		capability "Health Check"
+        capability "Color Control"
         
         command "resetLevel"
         command "resetSaturation"
@@ -114,6 +113,14 @@ metadata {
             state "default", label:' Sync ', unit:"", action: "resetHue", backgroundColor: "#ff9900"
             state "ok", label:'', unit:"", backgroundColor: "#00b509"
         }
+        
+       	standardTile("onButton", "onButton", height:1, width:3, decoration: "flat", inactiveLabel: true) {
+            state "default", action: "switch.on", label:"On", unit:""
+        }
+        
+        standardTile("offButton", "offButton", height:1, width:3, decoration: "flat", inactiveLabel: true) {
+            state "default", action: "switch.off", label:"Off", unit:""
+        }
 	}
     
     main "switch"
@@ -130,7 +137,9 @@ metadata {
         "hueLabel",
         "hueSliderControl",
         "hueValue",
-        "hueSync"])
+        "hueSync",
+        "onButton",
+        "offButton"])
 }
 
 def parse(String description) {
@@ -170,7 +179,7 @@ def off(triggerGroup) {
 }
 
 def syncSwitch(values) {
- log.debug "syncSwitch(): $values"
+	log.debug "syncSwitch(): $values"
     
     def onCount = values?.count { it == "on" }
     def percentOn = (int)Math.floor((onCount / values?.size()) * 100)
@@ -178,31 +187,29 @@ def syncSwitch(values) {
     log.debug "Percent On: $percentOn"
     
     if (percentOn == 0 || percentOn == 100) {
-    if (percentOn == 0)
-        off(false)
+    	if (percentOn == 0)
+        	off(false)
         else
-        on(false)            
+        	on(false)            
         return
     }
     
     def value = null
     
-    if (percentOn == 50)
+       if (percentOn == 50)
       //value = "half"
         value = "on"
-    else if (percentOn > 0 && percentOn <= 25)
-      //value = "almostAllOff"
-        value = "off"
-    else if (percentOn > 25 && percentOn < 50)
+    else if (percentOn > 0 && percentOn < 15)
       //value = "mostlyOff"
-        value = "on"
-    else if (percentOn > 50 && percentOn < 100)
+        value = "off"
+    else if (percentOn > 15 && percentOn < 100)
       //value = "mostlyOn"
         value = "on"
         
  sendEvent(name: "switch", value: value)
  sendEvent(name: "onPercentage", value: percentOn, displayed: false)
 }
+
 
 // LEVEL
 def setLevel(val) {
@@ -294,14 +301,14 @@ def setColor(value) {
 }
 
 def setColor(value, triggerGroup) {
-	value.level = null
+	value.level = device.currentValue("level")
     
     def hex = value.hex
     
     if (!hex && value.hue && value.saturation)
-		hex = colorUtil.hslToHex(value.hue, value.saturation)
+		hex = colorUtil.hslToHex((int)value.hue, (int)value.saturation)
         
-	sendEvent(name: "color", value: value.hex, displayed:false)
+	sendEvent(name: "color", value: hex, displayed:false)
     
     if (triggerGroup)
     	parent.performGroupCommand("setColor", [value])
