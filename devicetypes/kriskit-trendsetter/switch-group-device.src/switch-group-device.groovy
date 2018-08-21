@@ -29,13 +29,13 @@ metadata {
 	tiles(scale: 2) {
 		multiAttributeTile(name:"switch", type: "lighting", width: 6, height: 4, canChangeIcon: true){
 			tileAttribute ("device.switch", key: "PRIMARY_CONTROL") {
-				attributeState "on", label: '${name}', action: "switch.off", icon: "st.switches.switch.on", backgroundColor: "#00a0dc", nextState: "turningOff"
-				attributeState "off", label: '${name}', action: "switch.on", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn"
-				attributeState "turningOn", label: '${name}', action: "switch.off", icon: "st.switches.switch.on", backgroundColor: "#00a0dc", nextState: "turningOff"
-				attributeState "turningOff", label: '${name}', action: "switch.on", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn"
-                attributeState "half", label: '${name}', action: "switch.on", icon: "st.switches.switch.off", backgroundColor: "#6bb3ce", nextState: "turningOn"
-                attributeState "mostlyOn", label: 'Onish', action: "switch.on", icon: "st.switches.switch.off", backgroundColor: "#2fa8d6", nextState: "turningOn"
-                attributeState "mostlyOff", label: 'Offish', action: "switch.off", icon: "st.switches.switch.off", backgroundColor: "#98c1d1", nextState: "turningOff"
+				attributeState "on", label: '${name}', action: "switch.off", icon: "st.lights.multi-light-bulb-on", backgroundColor: "#00a0dc", nextState: "turningOff"
+				attributeState "off", label: '${name}', action: "switch.on", icon: "st.lights.multi-light-bulb-off", backgroundColor: "#ffffff", nextState: "turningOn"
+				attributeState "turningOn", label: '${name}', action: "switch.off", icon: "st.lights.multi-light-bulb-on", backgroundColor: "#00a0dc", nextState: "turningOff"
+				attributeState "turningOff", label: '${name}', action: "switch.on", icon: "st.lights.multi-light-bulb-off", backgroundColor: "#ffffff", nextState: "turningOn"
+                attributeState "half", label: '${name}', action: "switch.on", icon: "st.lights.multi-light-bulb-on", backgroundColor: "#6bb3ce", nextState: "turningOn"
+                attributeState "mostlyOn", label: 'Onish', action: "switch.on", icon: "st.lights.multi-light-bulb-on", backgroundColor: "#2fa8d6", nextState: "turningOn"
+                attributeState "mostlyOff", label: 'Offish', action: "switch.off", icon: "st.lights.multi-light-bulb-off", backgroundColor: "#98c1d1", nextState: "turningOff"
 			}
             
 			tileAttribute ("device.onPercentage", key: "SECONDARY_CONTROL") {
