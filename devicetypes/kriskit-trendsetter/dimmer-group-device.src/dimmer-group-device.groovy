@@ -157,10 +157,10 @@ def syncSwitch(values) {
     if (percentOn == 50)
       //value = "half"
         value = "on"
-    else if (percentOn > 0 && percentOn < 15)
+    else if (percentOn > 0 && percentOn < 18)
       //value = "mostlyOff"
         value = "off"
-    else if (percentOn > 15 && percentOn < 100)
+    else if (percentOn > 18 && percentOn < 100)
       //value = "mostlyOn"
         value = "on"
         
