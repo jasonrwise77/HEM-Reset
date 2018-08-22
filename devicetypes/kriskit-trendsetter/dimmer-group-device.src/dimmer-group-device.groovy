@@ -154,7 +154,7 @@ def syncSwitch(values) {
     
     def value = null
     
-    if (percentOn == 50)
+    if (percentOn == 51)
       //value = "half"
         value = "on"
     else if (percentOn > 0 && percentOn < 9)
