@@ -17,7 +17,7 @@
  */
 metadata {
 	// Automatically generated. Make future change here.
-	definition (name: "Iris Smart Plug", namespace: "blebson", author: "SmartThings", mnmn: "SmartThings", vid: "generic-switch") {
+	definition (name: "Iris Smart Plug", namespace: "blebson", author: "SmartThings", mnmn: "SmartThings", vid: "generic-switch-power-energy") {
 		capability "Actuator"
 		capability "Switch"
 		capability "Power Meter"
