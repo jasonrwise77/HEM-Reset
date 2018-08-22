@@ -55,7 +55,7 @@
  *
  */
 metadata {
-	definition (name: "My Aeon Home Energy Monitor Gen1", namespace: "jscgs350", author: "jscgs350")
+	definition (name: "My Aeon Home Energy Monitor Gen1", namespace: "jscgs350", author: "jscgs350", mnmn: "SmartThings", vid: "generic-switch-power-energy")
 	{
 		capability "Energy Meter"
 		capability "Power Meter"
