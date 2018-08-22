@@ -17,7 +17,7 @@
 *  Date: 2013-04-30
 */
 metadata {
-    definition (name: "SmartWeather Station 2", namespace: "takis", author: "Takis", mnmn: "SmartThings", vid: "generic-temp") {
+    definition (name: "SmartWeather Station 2", namespace: "takis", author: "Takis", mnmn: "SmartThings", vid: "generic-motion-6") {
         capability "Illuminance Measurement"
         capability "Temperature Measurement"
         capability "Relative Humidity Measurement"
