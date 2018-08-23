@@ -13,7 +13,7 @@
  */
 
 metadata {
-    definition (name: "Hue Motion Sensor", namespace: "digitalgecko", author: "digitalgecko", mnmn: "SmartThings", vid: "generic-motion-4") {
+    definition (name: "Hue Motion Sensor", namespace: "digitalgecko", author: "digitalgecko", ocfDeviceType: "x.com.st.d.sensor.motion", mnmn: "SmartThings", vid: "generic-motion-4") {
 
         
 		capability "Motion Sensor"
