@@ -22,7 +22,7 @@
  *  for the specific language governing permissions and limitations under the License.
  */
 metadata {
-	definition (name: "Other Hub Switch", namespace: "krlaframboise", author: "Kevin LaFramboise", mnmn: "SmartThings", vid: "generic-switch") {
+	definition (name: "Other Hub Switch", namespace: "krlaframboise", author: "Kevin LaFramboise", ocfDeviceType: "oic.d.smartplug", mnmn: "SmartThings", vid: "generic-switch") {
 		capability "Bridge"
 		capability "Sensor"
 		capability "Actuator"
