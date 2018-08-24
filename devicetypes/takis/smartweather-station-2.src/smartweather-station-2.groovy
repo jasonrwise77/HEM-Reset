@@ -17,13 +17,17 @@
 *  Date: 2013-04-30
 */
 metadata {
-    definition (name: "SmartWeather Station 2", namespace: "takis", author: "Takis", mnmn: "SmartThings", vid: "generic-motion-6") {
+    definition (name: "SmartWeather Station 2", namespace: "takis", author: "Takis", mnmn: "SmartThings", vid: "generic-motion-7") {
         capability "Illuminance Measurement"
         capability "Temperature Measurement"
         capability "Relative Humidity Measurement"
         capability "Sensor"
         capability "Polling"
-	capability "Health Check"
+        capability "Motion Sensor"
+        capability "Health Check"
+        capability "Motion Sensor"
+        capability "Sensor"
+
 
         attribute "localSunrise", "string"
         attribute "localSunset", "string"
@@ -55,6 +59,13 @@ metadata {
         attribute "pressureTrend", "string"
         
         command "refresh"
+		command "active"
+		command "inactive"
+   }
+
+	simulator {
+		status "active": "motion:active"
+		status "inactive": "motion:inactive"
     }
 
     preferences {
@@ -217,9 +228,13 @@ metadata {
 					[value: 92, color: "#d04e00"],
 					[value: 98, color: "#bc2323"]
             ]
+             	    }
+		standardTile("motion", "device.motion", width: 2, height: 2) {
+			state("inactive", label:'no motion', icon:"st.motion.motion.inactive", backgroundColor:"#cccccc", action: "active")
+			state("active", label:'motion', icon:"st.motion.motion.active", backgroundColor:"#00A0DC", action: "inactive")
         }
         main(["temperature2"])
-        details(["temperature", "feelslike", "weatherIcon", "weather", "humidity" , "dewpoint", "windinfo", "pressure", "solarradiation", "uv_index", "light", "visibility", "city", "rise", "set", "lastSTupdate", "percentPrecip", "percentPrecipToday", "percentPrecipLastHour", "water", "alert", "refresh"])}
+        details(["temperature", "feelslike", "weatherIcon", "weather", "humidity" , "dewpoint", "windinfo", "pressure", "solarradiation", "uv_index", "light", "visibility", "city", "rise", "set", "lastSTupdate", "percentPrecip", "percentPrecipToday", "percentPrecipLastHour", "water", "alert", "refresh","motion"])}
 }
 
 // parse events into attributes
@@ -539,4 +554,14 @@ private estimateLux(sunriseDate, sunsetDate, weatherIcon) {
     }
 
     lux
+}
+
+def active() {
+	log.trace "active()"
+	sendEvent(name: "motion", value: "active")
+}
+
+def inactive() {
+	log.trace "inactive()"
+    sendEvent(name: "motion", value: "inactive")
 }
