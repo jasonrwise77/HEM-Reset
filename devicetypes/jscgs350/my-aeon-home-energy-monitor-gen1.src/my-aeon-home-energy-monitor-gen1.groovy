@@ -55,7 +55,7 @@
  *
  */
 metadata {
-	definition (name: "My Aeon Home Energy Monitor Gen1", namespace: "jscgs350", author: "jscgs350", mnmn: "SmartThings", vid: "generic-switch-power-energy")
+	definition (name: "My Aeon Home Energy Monitor Gen1", namespace: "jscgs350", author: "jscgs350", ocfDeviceType: "oic.d.smartplug", mnmn: "SmartThings", vid: "generic-switch-power-energy")
 	{
 		capability "Energy Meter"
 		capability "Power Meter"
@@ -65,6 +65,7 @@ metadata {
 		capability "Polling"
 		capability "Battery"
 		capability "Health Check"
+        capability "Switch"
 
 		attribute "currentKWH", "string"		// Used to show current kWh since last reset
 		attribute "currentWATTS", "string"		// Used to show current watts being used on the main tile
@@ -78,6 +79,8 @@ metadata {
 		command "resetmin"
 		command "resetmax"
 		command "resetMeter"
+        command "onPhysical"
+        command "offPhysical"
 
 		fingerprint deviceId: "0x2101", inClusters: " 0x70,0x31,0x72,0x86,0x32,0x80,0x85,0x60"
 	}
@@ -121,10 +124,13 @@ metadata {
 		}
 		standardTile("configure", "device.configure", width: 3, height: 2, inactiveLabel: false, decoration: "flat") {
 			state "configure", label:'', action:"configure", icon:"st.secondary.configure"
-		}
-
+ 	    }
+        standardTile("switch", "device.switch", width: 2, height: 2, canChangeIcon: true) {
+            state "off", label: '${currentValue}', action: "switch.on", icon: "st.switches.switch.off", backgroundColor: "#ffffff"
+            state "on", label: '${currentValue}', action: "switch.off", icon: "st.switches.switch.on", backgroundColor: "#00A0DC"
+	}
 		main (["currentWATTS"])
-		details(["currentWATTS", "currentKWH", "kwhCosts", "iconTile", "statusText", "iconTile", "resetMessage", "resetmin", "resetmax", "resetkwh", "refresh", "configure"])
+		details(["currentWATTS", "currentKWH", "kwhCosts", "iconTile", "statusText", "iconTile", "resetMessage", "resetmin", "resetmax", "resetkwh", "refresh", "configure","switch","on","off"])
 	}
 
 	preferences {
@@ -532,3 +538,13 @@ def configure() {
 
 	cmd
 }
+
+def on() {
+    log.debug "$version on()"
+    sendEvent(name: "switch", value: "on")
+}
+
+def off() {
+    log.debug "$version off()"
+    sendEvent(name: "switch", value: "off")
+    }
