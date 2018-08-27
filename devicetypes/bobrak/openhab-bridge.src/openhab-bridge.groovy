@@ -22,9 +22,20 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 
 metadata {
-    definition (name: "OpenHAB Bridge", namespace: "bobrak", author: "St. John Johnson, Jeremiah Wuenschel and Bob Raker", mnmn: "SmartThings", vid: "generic-bridge") {
+    definition (name: "OpenHAB Bridge", namespace: "bobrak", author: "St. John Johnson, Jeremiah Wuenschel and Bob Raker", ocfDeviceType: "oic.d.button", mnmn: "SmartThings", vid: "generic-button") {
         capability "Notification"
         capability "Health Check"
+
+    }
+        simulator {}
+
+    tiles {
+        standardTile("basic", "device.ip", width:3, height: 2) {
+            state("basic", label:'ONLINE', icon: "st.Lighting.light99-hue", backgroundColor:"#00A0DC")
+            }
+		
+        main "basic"
+
     }
 
     preferences {
@@ -46,15 +57,6 @@ metadata {
             required: true,
             displayDuringSetup: true
         )
-    }
-
-    simulator {}
-
-    tiles {
-        valueTile("basic", "device.ip", width: 3, height: 2) {
-            state("basic", label:'OK')
-        }
-        main "basic"
     }
 }
 
