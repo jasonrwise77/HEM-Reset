@@ -25,16 +25,9 @@ metadata {
     definition (name: "OpenHAB Bridge", namespace: "bobrak", author: "St. John Johnson, Jeremiah Wuenschel and Bob Raker", ocfDeviceType: "oic.d.button", mnmn: "SmartThings", vid: "generic-button") {
         capability "Notification"
         capability "Health Check"
-
-    }
-        simulator {}
-
-    tiles {
-        standardTile("basic", "device.ip", width:3, height: 2) {
-            state("basic", label:'ONLINE', icon: "st.Lighting.light99-hue", backgroundColor:"#00A0DC")
-            }
-		
-        main "basic"
+        capability "Bridge"
+        
+		command "on"
 
     }
 
@@ -57,6 +50,17 @@ metadata {
             required: true,
             displayDuringSetup: true
         )
+        
+         }
+        simulator {}
+
+    tiles {
+        standardTile("basic", "device.ip", width:3, height: 2) {
+            state("basic", label:'ONLINE', icon: "st.Lighting.light99-hue", backgroundColor:"#00A0DC")
+            }
+		
+        main "basic"
+        
     }
 }
 
