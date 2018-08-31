@@ -11,7 +11,7 @@
 */
 
 metadata {
-	definition (name: "NYCE Ceiling Motion Sensor", namespace: "NYCE", author: "NYCE", mnmn: "SmartThings", vid: "generic-motion-6") {
+	definition (name: "NYCE Ceiling Motion Sensor", namespace: "NYCE", author: "NYCE", vid: "generic-motion-6") {
 		capability "Battery"
 		capability "Configuration"
 		capability "Motion Sensor"
