@@ -27,7 +27,7 @@
  *
  */
 metadata {
-    definition (name: "My Keen Home Smart Vent", namespace: "jscgs350", author: "Keen Home", mnmn: "SmartThings", vid: "generic-dimmer") {
+    definition (name: "My Keen Home Smart Vent", namespace: "jscgs350", author: "Keen Home", vid: "generic-dimmer") {
         capability "Switch Level"
         capability "Switch"
         capability "Configuration"
