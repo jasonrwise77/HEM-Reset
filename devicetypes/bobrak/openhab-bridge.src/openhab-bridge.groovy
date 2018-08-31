@@ -22,7 +22,7 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 
 metadata {
-    definition (name: "OpenHAB Bridge", namespace: "bobrak", author: "St. John Johnson, Jeremiah Wuenschel and Bob Raker", ocfDeviceType: "oic.d.button", mnmn: "SmartThings", vid: "generic-button") {
+    definition (name: "OpenHAB Bridge", namespace: "bobrak", author: "St. John Johnson, Jeremiah Wuenschel and Bob Raker", ocfDeviceType: "oic.d.button", vid: "generic-button") {
         capability "Notification"
         capability "Health Check"
         capability "Bridge"
