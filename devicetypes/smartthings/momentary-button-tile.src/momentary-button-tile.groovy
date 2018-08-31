@@ -17,7 +17,7 @@
  *  Date: 2013-05-01
  */
 metadata {
-	definition (name: "Momentary Button Tile", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "oic.d.button", mnmn: "SmartThings", vid: "generic-switch") {
+	definition (name: "Momentary Button Tile", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "oic.d.button", vid: "generic-switch") {
 		capability "Actuator"
 		capability "Switch"
 		capability "Momentary"
