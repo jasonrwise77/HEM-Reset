@@ -12,7 +12,7 @@
  */
  
 metadata {
-  definition (name: "Smart Alarm Notification Device", namespace: "lgkapps", author: "Larry Kahn kahn@lgk.com", mnmn: "SmartThings", vid:"generic-switch") {
+  definition (name: "Smart Alarm Notification Device", namespace: "lgkapps", author: "Larry Kahn kahn@lgk.com", vid:"generic-switch") {
     capability "Notification"
     capability "Switch"
     capability "Health Check"
