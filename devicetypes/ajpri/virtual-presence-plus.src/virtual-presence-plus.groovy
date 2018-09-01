@@ -4,7 +4,7 @@
 
 
 metadata {
-        definition (name: "Virtual Presence Plus", namespace: "ajpri", author: "Austin Pritchett", vid:"generic-arrival") {
+        definition (name: "Virtual Presence Plus", namespace: "ajpri", author: "Austin Pritchett", ocfDeviceType: "x.com.st.d.sensor.motion", vid:"generic-switch") {
         capability "Switch"
         capability "Refresh"
         capability "Presence Sensor"
