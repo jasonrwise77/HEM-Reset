@@ -17,7 +17,7 @@
  *  Date: 2013-05-01
  */
 metadata {
-	definition (name: "Momentary Button Tile test", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "x.com.st.d.remotecontroller", mnmn: "SmartThings", vid: "generic-switch") {
+	definition (name: "Momentary Button Tile", namespace: "smartthings", author: "SmartThings", ocfDeviceType: "x.com.st.d.remotecontroller", mnmn: "SmartThings", vid: "generic-switch") {
 		capability "Actuator"
 		capability "Switch"
 		capability "Momentary"
