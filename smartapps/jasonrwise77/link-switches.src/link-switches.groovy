@@ -13,8 +13,9 @@ definition(
 	author: "Jason Wise",
 	description: "Link state between a switches and a locks and switches with presence",
 	category: "Convenience",
-	iconUrl: "https://s3.amazonaws.com/smartapp-icons/Solution/doors-locks.png",
-	iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Solution/doors-locks@2x.png"
+    	iconUrl: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/Push%20Events.png",
+    	iconX2Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/Push%20Events.png",
+    	iconX3Url: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/Push%20Events.png"
 )
 
 preferences {
