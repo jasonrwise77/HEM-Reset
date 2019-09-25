@@ -1,5 +1,5 @@
 /**
- *  Link Switches - Presence
+ *  Switch Link - Presence
  *
  *  Link state between a switch and a presence sensor
  *
@@ -7,10 +7,10 @@
  */
 
 definition(
-	name: "Link Switches - Presence",
+	name: "Switch Link - Presence",
 	namespace: "jasonrwise77",
 	author: "Jason Wise",
-	parent: "jasonrwise77:Link Switches",
+	parent: "jasonrwise77:Switch Link",
 	description: "Link state between a switch and a presence sensor",
 	category: "Convenience",
     	iconUrl: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/Push%20Events.png",
