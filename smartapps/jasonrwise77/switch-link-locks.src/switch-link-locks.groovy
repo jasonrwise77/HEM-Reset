@@ -1,5 +1,5 @@
 /**
- *  Link Switches - Locks
+ *  Switch Link - Locks
  *
  *  Link state between a switch and a lock
  *
@@ -7,10 +7,10 @@
  */
 
 definition(
-	name: "Link Switches - Locks",
+	name: "Switch Link - Locks",
 	namespace: "jasonrwise77",
 	author: "Jason Wise",
-	parent: "jasonrwise77:Link Switches",
+	parent: "jasonrwise77:Switch Link",
 	description: "Link state between a switch and a lock",
 	category: "Convenience",
     	iconUrl: "https://raw.githubusercontent.com/jasonrwise77/My-SmartThings/master/icons/Push%20Events.png",
