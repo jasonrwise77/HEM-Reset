@@ -23,6 +23,8 @@ metadata {
 		capability "Momentary"
 		capability "Sensor"
         	capability "Health Check"
+           	capability "Button"
+            
 	}
 
 	// simulator metadata
@@ -48,7 +50,7 @@ def parse(String description) {
 def push() {
 	sendEvent(name: "switch", value: "on", isStateChange: true, displayed: false)
 	sendEvent(name: "switch", value: "off", isStateChange: true, displayed: false)
-	sendEvent(name: "momentary", value: "pushed", isStateChange: true)
+	sendEvent(name: "button", value: "pushed", isStateChange: true)
 }
 
 def on() {
